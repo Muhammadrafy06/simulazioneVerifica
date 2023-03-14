@@ -8,20 +8,12 @@ def hello_world():
     time = datetime.datetime.now()
     return render_template("index.html", dt=time)
 
-@app.route('/600', methods=['GET'])
-def size_1():
+@app.route('/mappa/<width>/<height>', methods=['GET'])
+def size_1(width, height):
   time = datetime.datetime.now()
-  return render_template("index1.html", dt=time)
+  return render_template("index1.html", dt=time, width=width, height=height)
 
-@app.route('/800', methods=['GET'])
-def size_2():
-  time = datetime.datetime.now()
-  return render_template("index2.html", dt=time)
 
-@app.route('/1000', methods=['GET'])
-def size_3():
-  time = datetime.datetime.now()
-  return render_template("index3.html", dt=time)
 
 
 if __name__ == '__main__':
