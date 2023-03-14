@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <h1>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/styles.css')}}">
+    <h1 class = "titleTextStyle">
         IIS GALVANI MILANO
-       </h1>
+    </h1>
     </head>
-    <body>
-
+    <body class = "backgroundStyle">
+        <div>
+            <img src="{{url_for('static', filename='images/galvaniIMG.jpg')}}" width="400" height="300">
+        </div>
     </body>
 </html>
